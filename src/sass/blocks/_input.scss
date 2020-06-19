@@ -1,0 +1,32 @@
+.input {
+  color: $mine-shaft;
+  text-transform: uppercase;
+
+  border: 1px solid $border-color;
+}
+
+.input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input:focus,
+.input:active {
+  @include hover-animation;
+
+  border: 2px solid $code-gray;
+
+  outline: none;
+}
+
+.input--error {
+  @include hover-animation;
+
+  border: 2px solid #ff8888;
+}
+
+@media (min-width: $mobile-width) {
+  .input:focus,
+  .input:active {
+    border: 1.5px solid $code-gray;
+  }
+}

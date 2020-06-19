@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  
+  border: none;
+  background-color: $apple;
+}
+
+.btn:hover,
+.btn:focus {
+  @include hover-animation;
+
+  background-color: #5eaa2f;
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}

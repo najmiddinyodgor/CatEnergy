@@ -1,0 +1,135 @@
+.more {
+
+  &__wrap {
+    padding: 80px 0 25px;
+  }
+
+  &__slogan {
+    position: relative;
+
+    display: block;
+    margin-bottom: 8px;
+
+    color: $code-gray;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__slogan::before {
+    content: "";
+
+    position: absolute;
+    top: -54px;
+    left: 50%;
+
+    height: 30px;
+    width: 30px;
+    margin-left: -15px;
+
+    background-image: url('../img/svg/plus.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__intro {
+    display: block;
+    margin-bottom: 24px;
+
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    text-align: center;
+    text-transform: none;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 10px 0;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $tundora;
+    
+    background-color: $concrete;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more {
+    @include set-flex(space-between, stretch);
+
+    &__wrap {
+      @include set-flex(space-between, stretch);
+      flex-direction: column;
+
+      width: 100%;
+      margin: 0;
+      padding: 40px;
+      padding-top: 160px;
+    }
+
+    &__slogan {
+      position: relative;
+
+      display: block;
+      margin-bottom: 35px;
+
+      font-size: 2rem;
+      line-height: 2.2rem;
+      text-align: center;
+    }
+
+    &__slogan::before {
+      top: -108px;
+
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+
+      background-size: cover;
+    }
+
+    &__intro {
+      display: block;
+
+      font-size: 1.8rem;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: none;
+    }
+
+    &__btn {
+      margin-top: auto;
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+      @include hover-animation;
+      
+      background-color: #ebebeb;
+    }
+
+    &__btn:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more {
+
+    &__slogan {
+      padding: 0 10px;
+    }
+
+    &__slogan::before {
+      top: -110px;
+    }
+
+    &__intro {
+      padding: 0 10px;
+    }
+
+  }
+}

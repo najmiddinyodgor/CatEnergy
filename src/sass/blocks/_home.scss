@@ -1,0 +1,40 @@
+// Фоновое изоброжение для моб-версии
+
+@media (max-width: $tablet-width - 1px) {
+  .home {
+    .choose-programm {
+      background-image: url('../img/bg/bg-mobile.jpg');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 100% 305px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      .home {
+        .choose-programm {
+          background-image: url('../img/bg/bg-mobile@2x.jpg');
+      }
+    }
+  }
+}
+// Фоновое изоброжение для десктоп-версии
+
+@media (min-width: $desktop-width) {
+  .home {
+    .only-for-bg {
+      background-image: url('../img/bg/bg-desktop.jpg');
+      background-repeat: no-repeat;
+      background-position: 100% top;
+      background-size: 720px 696px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      .home {
+        .only-for-bg {
+          background-image: url('../img/bg/bg-desktop@2x.jpg');
+      }
+    }
+  }
+}

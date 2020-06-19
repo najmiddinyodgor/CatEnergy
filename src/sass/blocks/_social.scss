@@ -1,0 +1,29 @@
+.social {
+
+  &__list {
+    @include list-reset;
+    @include set-flex(center, center);
+
+    margin: 0 auto;
+    padding: 24px 0;
+  }
+
+  &__item {
+    margin-right: 30px;
+  }
+
+  &__link {
+    fill: $dove-gray;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    @include hover-animation;
+
+    fill: $apple;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+}

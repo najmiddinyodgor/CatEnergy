@@ -1,0 +1,142 @@
+.programm-type {
+  border: none;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  &__list {
+    @include list-reset;
+    padding: 20px 0 22px;
+  }
+
+  &__item {
+    margin-bottom: 23px;
+  }
+
+  &__item:last-child {
+    margin: 0;
+  }
+
+  &__label {
+    position: relative;
+
+    margin-left: 45px;
+
+    color: $mine-shaft;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+  }
+
+  &__label::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -45px;
+
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $border-color;
+    border-radius: 15px;
+  }
+
+  &__input:checked + &__label::after {
+    content: "";
+
+    position: absolute;
+    top: 7px;
+    left: -35.5px;
+
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    
+    background-color: $apple;
+    border-radius: 6px;
+  }
+
+  &__label:active {
+    @include hover-animation;
+
+    opacity: 0.3;
+  }
+
+  &__input:focus + &__label:before {
+    border-color: #999999;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programm-type {
+    border: none;
+    
+    &__wrap {
+      padding: 25px;
+      border: 1px solid $border-color;
+    }
+
+    &__list {
+      padding: 0;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+    }
+
+    &__label {
+      margin-left: 65px;
+
+      font-size: 2rem;
+      line-height: 2rem;
+
+      cursor: pointer;
+    }
+
+    &__label::before {
+      top: -4px;
+      left: -65px;
+
+      box-sizing: border-box;
+      width: 40px;
+      height: 40px;
+
+      border: 1px solid $border-color;
+      border-radius: 20px;
+    }
+
+    &__input:checked + &__label::after {
+      top: 9px;
+      left: -52px;
+
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      
+      background-color: $apple;
+      border-radius: 7px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programm-type {
+    box-sizing: border-box;
+    width: 570px;
+    margin-right: 110px;
+
+    border: 1px solid $border-color;  
+    
+    &__wrap {
+      margin: 0;
+      padding: 35px 25px;
+
+      border: none;
+    }
+
+    &__list {
+      margin: 0;
+    }
+  }
+}

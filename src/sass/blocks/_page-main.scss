@@ -1,0 +1,79 @@
+.page-main {
+
+  &__wrap {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+
+    color: $code-gray;
+    font-size: 3.6rem;
+    line-height: 6rem;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  &__intro {
+    display: block;
+    margin-bottom: 38px;
+
+    color: $code-gray;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-main {
+
+    &__intro {
+      margin-left: 40px;
+    }
+
+    &__wrap {
+      max-width: 100%;
+      margin: 0;
+
+      border: none;
+    }
+
+    &__title {
+      padding-top: 0;
+      margin-bottom: 50px;
+
+      font-size: 6rem;
+      line-height: 6rem;
+
+      border-top: none;
+    }
+
+    &__intro {
+      margin-bottom: 70px;
+
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+
+    &__intro {
+      margin-left: 0;
+    }
+
+    &__wrap {
+      position: relative; //Для contacts.scss
+      padding-top: 5px;
+    }
+
+    &__title {
+      margin-bottom: 55px;
+    }
+  }
+}

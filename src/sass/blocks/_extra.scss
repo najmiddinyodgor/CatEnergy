@@ -1,0 +1,149 @@
+.extra {
+  border: none;
+  border-top: 3px solid $apple;
+
+  &__legend {
+    padding: 0 20px;
+    margin-bottom: 30px;
+
+    color: $code-gray;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    text-transform: none;
+
+    transform: translateY(-3px);
+  }
+
+  &__list {
+    @include list-reset;
+
+    margin-bottom: -24px;
+  }
+
+  &__item {
+    @include set-flex(space-between, center);
+
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    position: relative;
+    margin-left: 45px;
+
+    color: $mine-shaft;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+  }
+
+  &__label::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: -45px;
+
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $border-color;
+  }
+
+  &__input:checked + &__label::after {
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: -43px;
+
+    width: 28px;
+    height: 20px;
+
+    background-image: url("../img/svg/tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__input:focus + &__label::before {
+    border-color: #999999;
+  }
+
+  &__label:active {
+    @include hover-animation;
+
+    opacity: 0.3;
+  }
+
+}
+
+@media (min-width: $tablet-width) {
+  .extra {
+    border-width: 4px;
+
+    &__legend {
+      box-sizing: border-box;
+      width: 290px;
+      margin: 0;
+      padding: 0 40px;
+      margin-left: 30px;
+      margin-bottom: 70px;
+
+      font-size: 3.6rem;
+      line-height: 3.6rem;
+
+      transform: translateY(-5px);
+    }
+
+    &__list {
+      @include set-flex(space-between, stretch);
+      
+      margin-bottom: -50px;
+    }
+
+    &__item {
+      @include set-flex(space-between, center);
+      width: 245px;
+      margin-bottom: 50px;
+    }
+    
+    &__label {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      margin-left: 60px;
+
+      font-size: 2rem;
+      line-height: 2rem;
+
+      cursor: pointer;
+    }
+
+    &__label::before {
+      top: -9px;
+      left: -60px;
+
+      width: 40px;
+      height: 40px;
+    }
+
+    &__input:checked + &__label::after {
+      top: 0;
+      left: -52px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra {
+    width: 100%;
+
+    &__legend {
+      margin-left: 70px;
+    }
+
+    &__item {
+      width: 284px;
+    }
+  }
+}

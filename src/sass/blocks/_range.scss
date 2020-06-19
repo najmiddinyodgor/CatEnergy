@@ -1,0 +1,133 @@
+.range {
+  @include set-flex(center, center);
+
+  background-color: $concrete;
+
+  &__title {
+    color: $code-gray;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  &__range-control {
+    margin: 0 17px;
+  }
+
+  &__scale {
+    box-sizing: border-box;
+    width: 85px;
+    height: 15px;
+    padding: 4px 5px 3px;
+
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+  }
+
+  &__bar {
+    width: 50%;
+    height: 5px;
+
+    background-color: $apple;
+    border-radius: 10px;
+  }
+
+  &__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range {
+    background-color: transparent;
+
+    &__title {
+      @include set-border(bottom);
+      padding-bottom: 5px;
+
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    &__range-control {
+      margin: 0 25px;
+    }
+
+    &__scale {
+      position: relative;
+
+      box-sizing: border-box;
+      width: 426px;
+      height: 9px;
+      padding: 0;
+
+      background-color: #dcdcdc;
+      border: none;
+      border-radius: 8px;
+    }
+
+    &__bar {
+      display: none;
+    }
+
+    &__toggle {
+      position: absolute;
+      top: -13px;
+      left: 46.5%;
+
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin: 0;
+      padding: 0;
+
+      border: 1px solid $border-color;
+      border-radius: 17px;
+      background-color: $white;
+
+      cursor: pointer;
+    }
+
+    &__toggle:hover,
+    &__toggle:focus {
+      @include hover-animation(0.05s);
+
+      transform: scale(1.1);
+
+      box-shadow: -1px -1px #cdcdcd inset;
+    }
+
+    &__toggle:active {
+      border: 0.5px solid $apple;
+
+      box-shadow: 2px 2px #cdcdcd;
+    }
+
+    &__toggle::before {
+      content: "";
+
+      position: absolute;
+      top: 12px;
+      left: 12px;
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 4px;
+      background-color: $apple;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .range {
+    @include set-flex(space-between, center);
+
+    background-color: transparent;
+
+    &__title {
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+    }
+  }
+}

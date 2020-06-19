@@ -1,0 +1,22 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin set-flex($justify-content, $align-items, $wrap: wrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+
+@mixin set-border($side, $color: $border-color, $width: 1px, $type: solid) {
+  border-#{$side}: $width $type $color;
+}
+
+@mixin hover-animation($time: 0.25s, $timing-function: ease) {
+  transition-duration: $time;
+  transition-timing-function: $timing-function;
+}
